@@ -61,8 +61,13 @@ MCP. Subscribe there if you want the REST API billed through RapidAPI; come here
 - **Latency:** every call is a live fetch from the source, not a cache. Measured 2026-09-14, one call each: a
   YouTube transcript in 3.7s, Google Play reviews in 3.8s, a Google Trends keyword in 8.6s, and a whole
   channel of 25 videos with every transcript in 29.8s; the slowest single call that day was 21s. **Set your client timeout to at least 60 seconds.**
-- **Large results:** a tool result is truncated at 120,000 characters and says so in its first line, so a whole
-  channel cannot silently blow up a context window. Narrow the request for the rest.
+- **Built for a context window:** results come back as a reading, not a dump. One Google Trends keyword is
+  146 rows and about 37,000 characters of JSON; the MCP answer is around 1,200 characters and says where
+  interest sits against the window, the top regions, and the top and rising related queries. Reviews come
+  back as a star distribution plus one line each; transcripts as title, channel, language and text. Pass
+  `raw: true` on any tool for every field.
+- **Large results:** a tool result is truncated at 120,000 characters and says so in its first line, so a
+  whole channel cannot silently blow up a context window. Narrow the request for the rest.
 - **Errors:** a failed call comes back as an MCP tool result with `isError` set and the reason in the text,
   rather than as a protocol error, so an agent can read and recover from it.
 
