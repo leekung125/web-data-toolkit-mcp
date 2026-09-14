@@ -39,7 +39,15 @@ documentation, an OpenAPI specification and an `llms.txt` live at
 
 ## Getting a key
 
-Subscribe on RapidAPI: <https://rapidapi.com/leetanakung98/api/web-data-toolkit>. There is a free tier.
+**Start with `wdt_demo_public`.** It is shared, rate limited and capped at 10 rows per call, and every tool
+answers on it — enough to see the exact shape of the data.
+
+**For a personal key with higher limits, [open an issue](https://github.com/leekung125/web-data-toolkit-mcp/issues/new)**
+and say roughly what volume you need.
+
+⛔ A **RapidAPI** subscription (<https://rapidapi.com/leetanakung98/api/web-data-toolkit>) issues a key for
+RapidAPI's own gateway. That key authenticates against *their* endpoint, not this one, so it will not work for
+MCP. Subscribe there if you want the REST API billed through RapidAPI; come here for MCP.
 
 ## How it behaves
 
