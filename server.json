@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.leekung125/web-data-toolkit",
+  "description": "YouTube transcripts for a video or a whole channel, Google Trends interest and related queries, and Google Play reviews - four public-data tools behind one key.",
+  "version": "1.0.0",
+  "websiteUrl": "https://web-data-toolkit.vercel.app",
+  "repository": {
+    "url": "https://github.com/leekung125/web-data-toolkit-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://web-data-toolkit.vercel.app/mcp",
+      "headers": [
+        {
+          "name": "x-api-key",
+          "description": "Your Web Data Toolkit key, from the RapidAPI listing",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

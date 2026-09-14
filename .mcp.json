@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "web-data-toolkit": {
+      "type": "http",
+      "url": "https://web-data-toolkit.vercel.app/mcp",
+      "headers": { "x-api-key": "${WEB_DATA_TOOLKIT_KEY}" }
+    }
+  }
+}
