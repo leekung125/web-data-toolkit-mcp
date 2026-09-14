@@ -20,6 +20,10 @@ Hosted and remote — there is nothing to install, build, or keep running. Point
 Clients that accept only a URL can carry the key in the query string instead:
 `https://web-data-toolkit.vercel.app/mcp?key=YOUR_KEY`
 
+**Try it before signing up.** Put `wdt_demo_public` in as the key. It is a shared demo key: rate limited,
+and capped at 10 rows per call, but every tool answers and you can see the exact shape of the data before
+you decide anything.
+
 ## Tools
 
 | Tool | What it returns | Required |
