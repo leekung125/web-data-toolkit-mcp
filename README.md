@@ -29,9 +29,13 @@ you decide anything.
 | Tool | What it returns | Required |
 |---|---|---|
 | `youtube_transcript` | Transcript text for up to 50 videos, with language, an auto-generated flag, word count, title and channel | `url` |
-| `youtube_channel_transcripts` | Every recent video of a channel, `@handle` or playlist, each with metadata and transcript | `source` |
+| `youtube_channel_transcripts` | Every recent video of a channel, `@handle` or playlist, each with metadata and transcript — or pass `search: your query` to search YouTube and get the top results with transcripts | `source` |
 | `google_trends` | Interest over time, interest by region, and top plus rising related queries for up to 5 keywords | `keyword` |
 | `google_play_reviews` | Rating, text, author, thumbs-up, app version and the developer's reply | `app` |
+
+**Question to transcripts in one call.** `{"source": "search: cold plunge recovery", "max": 3}` searches
+YouTube and returns the top results with full transcripts, so an agent does not have to know which creator to
+ask first.
 
 Optional arguments are described in each tool's input schema, so your client will show them. Full REST
 documentation, an OpenAPI specification and an `llms.txt` live at
